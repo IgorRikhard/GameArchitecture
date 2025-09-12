@@ -1,0 +1,8 @@
+# Ignore everything
+/*
+Assets/Packages
+Assets/TextMesh Pro
+
+# But not this folder
+!Assets
+!.gitignore
