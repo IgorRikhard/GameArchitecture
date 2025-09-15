@@ -6,5 +6,7 @@ namespace Core.Utils
     public class PrefabReference : ScriptableObject
     {
         [SerializeField] private LayerType layerType;
+        
+        public LayerType LayerType => layerType;
     }
 }

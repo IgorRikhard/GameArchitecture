@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moduleName: UIModule
   _enabled: 1
-  mainUIPrefabSettings:
+  _priority: 0
+  _mainUIPrefabSettings:
     _mainUIPrefabRef: {fileID: 11400000, guid: 02980637309f04fcc987d427d59c93f9, type: 2}
+  _configuration: {fileID: 11400000, guid: 2a4e1d4e91ed248deaab29039f9a009c, type: 2}

@@ -6,13 +6,16 @@ using UnityEngine;
 namespace Game.UI.UIModule
 {
     [CreateAssetMenu(menuName = "Config/UIModule", fileName = "UIModules")]
-    public class UIModule: GameModule
+    public class UIModule : GameModule
     {
-        [SerializeField]
-        private UIInitService.Settings mainUIPrefabSettings;
+        [SerializeField] private UIInitService.Settings _mainUIPrefabSettings;
+
+        [SerializeField] private UIConfiguration _configuration;
+
         public override void Install(ServiceContainer container)
         {
-            container.Bind<UIInitService>(mainUIPrefabSettings);
+            container.InstantiateAndBind<UIService>();
+            container.InstantiateAndBind<UIInitService>(_mainUIPrefabSettings, _configuration);
         }
     }
 }

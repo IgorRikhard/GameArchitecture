@@ -51,6 +51,31 @@ namespace Core.DI
             }
         }
 
+        public TService Instantiate<TService>(params object[] constructorArgs) where TService : class
+        {
+            var serviceType = typeof(TService);
+            object instance;
+            
+            if (constructorArgs != null && constructorArgs.Length > 0)
+            {
+                instance = ConstructWithArgs(serviceType, constructorArgs);
+            }
+            else
+            {
+                instance = Construct(serviceType);
+            }
+            
+            // Bind the created instance
+            Bind((TService)instance);
+            
+            return (TService)instance;
+        }
+
+        public TService InstantiateAndBind<TService>(params object[] constructorArgs) where TService : class
+        {
+            return Instantiate<TService>(constructorArgs);
+        }
+
         public TService Resolve<TService>()
         {
             return (TService)Resolve(typeof(TService));
@@ -247,7 +272,7 @@ namespace Core.DI
         private bool IsNonConstructible(Type type)
         {
             return type.IsPrimitive || type == typeof(string) || type == typeof(decimal) || 
-                   type.IsEnum || type.IsValueType || type.IsInterface || type.IsAbstract;
+                   type.IsEnum || type.IsValueType;
         }
 
         private void InjectMembers(object instance)

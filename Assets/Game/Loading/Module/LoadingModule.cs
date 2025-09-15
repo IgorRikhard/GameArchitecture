@@ -10,8 +10,8 @@ namespace UnityEngine
         public override void Install(ServiceContainer container)
         {
             container.BindCollection<ILoadingOperation>();
-            container.Bind<LoadingRunner>();
-            container.Bind<LoadingService>();
+            container.InstantiateAndBind<LoadingRunner>();
+            container.InstantiateAndBind<LoadingService>();
         }
     }
 }

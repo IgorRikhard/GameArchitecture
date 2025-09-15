@@ -1,9 +1,8 @@
-using UnityEngine;
+using Core.DI;
 
-public class MainUI : MonoBehaviour
+namespace Game.UI.App
 {
-    private void Awake()
+    public class MainUI : DIBehaviour
     {
-        DontDestroyOnLoad(gameObject);
     }
 }
