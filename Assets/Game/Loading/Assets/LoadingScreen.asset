@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73631cb6ab3e495b9f90bb48e783ca4c, type: 3}
-  m_Name: LoadingModule
+  m_Script: {fileID: 11500000, guid: 3305c2164f09845e2a2a584c687735ae, type: 3}
+  m_Name: LoadingScreen
   m_EditorClassIdentifier: 
-  _moduleName: Loading Module
-  _enabled: 1
-  _priority: 20
-  _uiSettings:
-    _prefabReference: {fileID: 11400000, guid: 7e625f428dd714d9b9c15f8a0d5b7269, type: 2}
+  layerType: 1

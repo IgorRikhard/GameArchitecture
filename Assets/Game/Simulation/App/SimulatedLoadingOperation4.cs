@@ -1,6 +1,6 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Loading;
+using Game.Loading.Api;
 
 namespace UnityEngine
 {

@@ -43,7 +43,7 @@ namespace Game.UI.App
                 throw new System.ArgumentNullException(nameof(prefabRef));
             }
             
-            return await uiBuilder.ShowUI<T>(prefabRef, layerType, viewModel);
+            return await uiBuilder.ShowUI<T>(prefabRef, viewModel);
         }
     }
 }

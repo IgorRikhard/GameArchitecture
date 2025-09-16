@@ -1,4 +1,4 @@
-namespace Loading
+namespace Game.Loading.Api
 {
 	public interface ILoadingOperationData
 	{

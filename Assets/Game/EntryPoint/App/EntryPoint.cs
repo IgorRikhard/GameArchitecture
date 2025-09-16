@@ -1,7 +1,8 @@
+using System.Threading;
 using Core.Modules;
 using Cysharp.Threading.Tasks;
+using Game.Loading.App;
 using Game.UI.App;
-using Loading;
 using UnityEngine;
 
 namespace Game.EntryPoint.UI
@@ -10,6 +11,8 @@ namespace Game.EntryPoint.UI
     {
         [SerializeField]
         private ModulesConfig _modulesConfig;
+        
+        private CancellationTokenSource _loadingCts = new();
         
         private void Start()
         {
@@ -27,7 +30,7 @@ namespace Game.EntryPoint.UI
             await uiInit.LoadMainUIAsync();
             
             var loadingService = di.Resolve<LoadingService>();
-            await loadingService.StartLoading();
+            await loadingService.StartLoading(_loadingCts.Token);
         }
     }
 }

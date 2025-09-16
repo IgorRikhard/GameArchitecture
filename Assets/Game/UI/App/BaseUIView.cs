@@ -1,14 +1,16 @@
 using System;
+using R3;
 using UnityEngine;
 
 namespace Game.UI.App
 {
-    public abstract class BaseUIView<TViewModel> : MonoBehaviour, IUIView where TViewModel : class
+    public abstract class BaseUIView<TViewModel> : MonoBehaviour, IUIView, IViewModelContainer where TViewModel : class
     {
         [SerializeField] protected bool startVisible = false;
         
         protected TViewModel _viewModel;
         protected bool _isVisible;
+        protected CompositeDisposable bindableDisposables = new();
         
         public bool IsVisible => _isVisible;
         
@@ -28,6 +30,19 @@ namespace Game.UI.App
         {
             _viewModel = viewModel;
             OnViewModelSet();
+        }
+        
+        // IViewModelContainer implementation
+        void IViewModelContainer.SetViewModel(BaseViewModel viewModel)
+        {
+            if (viewModel is TViewModel typedViewModel)
+            {
+                SetViewModel(typedViewModel);
+            }
+            else
+            {
+                Debug.LogWarning($"Cannot set viewmodel of type {viewModel?.GetType().Name} on UI view expecting {typeof(TViewModel).Name}");
+            }
         }
         
         protected virtual void OnViewModelSet()
@@ -77,6 +92,7 @@ namespace Game.UI.App
         {
             OnShow = null;
             OnHide = null;
+            bindableDisposables.Dispose();
         }
     }
 }

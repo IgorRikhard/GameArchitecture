@@ -1,8 +1,9 @@
 using System.Threading;
-using UnityEngine.SceneManagement;
 using Cysharp.Threading.Tasks;
+using Game.Loading.Api;
+using UnityEngine.SceneManagement;
 
-namespace Loading
+namespace Game.Loading.App
 {
 	public class SceneLoadingOperation : ILoadingOperation
 	{

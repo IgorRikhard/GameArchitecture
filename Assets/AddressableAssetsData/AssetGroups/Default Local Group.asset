@@ -17,6 +17,11 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: c8c26704cb434439b9c040ef6f3f2c44
   m_SerializeEntries:
+  - m_GUID: 4c52d77f7f68f4d38af6fb7eb7588ef0
+    m_Address: LoadingScreen@Prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e91ba73afd6f6459ba6da122308f3b18
     m_Address: MainUI@Prefab
     m_ReadOnly: 0

@@ -1,4 +1,6 @@
-namespace Loading
+using Game.Loading.Api;
+
+namespace Game.Loading.App
 {
 	public class SceneLoadingOperationData : ILoadingOperationData
 	{

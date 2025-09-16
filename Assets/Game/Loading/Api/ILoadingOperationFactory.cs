@@ -1,6 +1,4 @@
-using System.Collections.Generic;
-
-namespace Loading
+namespace Game.Loading.Api
 {
 	public interface ILoadingOperationFactory
 	{

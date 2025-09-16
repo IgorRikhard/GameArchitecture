@@ -40,7 +40,7 @@ namespace Game.UI.App
                 return null;
             }
             
-            return await _uiBuilder.ShowUI<T>(prefabRef, prefabRef.LayerType, viewModel, cancellationToken);
+            return await _uiBuilder.ShowUI<T>(prefabRef, viewModel, cancellationToken);
         }
 
         public void ShowUI(PrefabReference prefabRef, BaseViewModel viewModel = null)
