@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moduleName: Loading Module
   _enabled: 1
-  _priority: 20
+  _priority: 10
   _uiSettings:
     _prefabReference: {fileID: 11400000, guid: 7e625f428dd714d9b9c15f8a0d5b7269, type: 2}

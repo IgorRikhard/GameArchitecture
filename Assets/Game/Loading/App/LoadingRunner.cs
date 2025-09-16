@@ -17,8 +17,7 @@ namespace Game.Loading.App
             _loadingScreenUIService = loadingScreenUIService;
         }
         
-        public async UniTask Run(List<ILoadingOperation> operations,
-            CancellationToken cancellationToken = default)
+        public async UniTask Run(List<ILoadingOperation> operations, CancellationToken cancellationToken = default)
         {
             if (operations == null || operations.Count == 0)
             {

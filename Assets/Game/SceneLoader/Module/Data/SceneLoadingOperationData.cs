@@ -1,6 +1,6 @@
 using Game.Loading.Api;
 
-namespace Game.Loading.App
+namespace Game.SceneLoader.Module.Data
 {
 	public class SceneLoadingOperationData : ILoadingOperationData
 	{

@@ -1,9 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Core.DI
 {
-    public sealed class DICollection<T> : IEnumerable<T>
+    public sealed class DICollection<T>
     {
         private readonly IReadOnlyList<T> _items;
 
@@ -14,7 +14,16 @@ namespace Core.DI
 
         public int Count => _items.Count;
         public T this[int index] => _items[index];
-        public IEnumerator<T> GetEnumerator() => _items.GetEnumerator();
-        IEnumerator IEnumerable.GetEnumerator() => _items.GetEnumerator();
+        
+        // Composition instead of inheritance
+        public IReadOnlyList<T> Items => _items;
+        
+        // Helper methods for common operations
+        public bool Contains(T item) => _items.Contains(item);
+        public T[] ToArray() => _items.ToArray();
+        public List<T> ToList() => new List<T>(_items);
+        
+        // For iteration, use Items property
+        // Example: foreach(var item in collection.Items) { ... }
     }
 }
