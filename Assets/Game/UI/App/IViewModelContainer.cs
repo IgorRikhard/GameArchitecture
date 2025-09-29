@@ -14,3 +14,4 @@ namespace Game.UI.App
         void SetViewModel(BaseViewModel viewModel);
     }
 }
+

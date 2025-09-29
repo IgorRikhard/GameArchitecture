@@ -12,3 +12,4 @@ namespace Game.UI.App
         event Action OnHide;
     }
 }
+
