@@ -1,5 +1,6 @@
 using UnityEngine;
 using Core.DI;
+using ServiceContainer = _UPM.HappyDI.Runtime.ServiceContainer;
 
 namespace Core.Modules
 {

@@ -2,6 +2,7 @@ using Core.DI;
 using Core.Modules;
 using Game.UI.App;
 using UnityEngine;
+using ServiceContainer = _UPM.HappyDI.Runtime.ServiceContainer;
 
 namespace Game.UI.UIModule
 {

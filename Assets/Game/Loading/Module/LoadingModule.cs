@@ -3,6 +3,7 @@ using Core.Modules;
 using Game.Loading.Api;
 using Game.Loading.App;
 using UnityEngine;
+using ServiceContainer = _UPM.HappyDI.Runtime.ServiceContainer;
 
 namespace Game.Loading.Module
 {

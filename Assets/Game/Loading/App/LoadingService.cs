@@ -9,10 +9,9 @@ namespace Game.Loading.App
     public class LoadingService
     {
         private readonly LoadingRunner _loadingRunner;
-        private readonly DICollection<ILoadingOperation> _loadingOperations;
+        private readonly _UPM.HappyDI.Runtime.DICollection<ILoadingOperation> _loadingOperations;
         
-        public LoadingService(LoadingRunner loadingRunner,
-            DICollection<ILoadingOperation> loadingOperations)
+        public LoadingService(LoadingRunner loadingRunner, _UPM.HappyDI.Runtime.DICollection<ILoadingOperation> loadingOperations)
         {
             _loadingRunner = loadingRunner;
             _loadingOperations = loadingOperations;
